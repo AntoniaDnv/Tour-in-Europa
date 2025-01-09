@@ -179,10 +179,6 @@ nav a:hover {
     color: #ffd700;
 }
 
-
-
-
-
 #events .card {
   display: flex;
   flex-direction: row;    /* Keep the content side-by-side */
