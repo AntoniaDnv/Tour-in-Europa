@@ -1,118 +1,160 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
+  }
+  body {
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
-}
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s forwards;
-}
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-/* Slide-up Animation for Event Cards */
-.slide-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 1s forwards;
-}
-@keyframes slideUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-/* Button Hover Animation */
-.event-card button {
-    transition: background-color 0.3s, transform 0.3s;
-}
-.event-card button:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-/* Header */
-header {
+  }
+
+  /* Header */
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid #ddd;
-}
-/* Logo */
-.logo {
+  }
+  .logo {
     display: flex;
     align-items: center;
-}
-.logo img {
-    height: 70px; /* Increased logo size for a more prominent look */
-    margin-right: 15px; /* Spacing between logo and text */
-}
-.logo h1 {
+  }
+  .logo h1 {
     font-size: 24px;
     color: #333;
-}
-nav a {
+  }
+  nav a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
     transition: color 0.3s;
-}
-nav a:hover {
+  }
+  nav a:hover {
     color: #555;
-}
-/* Main Content */
-.main-content {
+  }
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    background: url('https://slightnorth.com/wp-content/uploads/2020/06/daniil-silantev-z3oVKe1Vtk-unsplash-1280x640.jpg')
+      no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .search-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+  .cta-button {
+    background-color: #ff5a3c;
+    color: white;
+    padding: 8px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .cta-button:hover {
+    background-color: #e04a32;
+  }
+
+  /* Main Content */
+  .main-content {
     text-align: center;
     padding: 60px 20px;
-}
-.main-content h2 {
+  }
+  .main-content h2 {
     font-size: 32px;
     margin-bottom: 10px;
-}
-.main-content p {
+  }
+  .main-content p {
     color: #666;
-}
-/* Events Section */
-.events-section {
+  }
+
+  /* Events Section */
+  .events-section {
     padding: 40px 20px;
-}
-.events-section h3 {
+  }
+  .events-section h3 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-}
-.event-cards {
+  }
+  .event-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-}
-.event-card {
+  }
+  .event-card {
     width: 300px;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-}
-.event-card h4 {
+  }
+  .event-card h4 {
     font-size: 18px;
     margin-bottom: 10px;
-}
-.event-card p {
+  }
+  .event-card p {
     color: #666;
     font-size: 14px;
     margin-bottom: 15px;
-}
-/* Footer */
-footer {
+  }
+  .event-card button {
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .event-card button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+
+  /* Footer */
+  footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,23 +162,52 @@ footer {
     background-color: #f9f9f9;
     border-top: 1px solid #ddd;
     font-size: 14px;
-}
-.social-links a {
+  }
+  .social-links a {
     margin: 0 10px;
     color: #333;
     text-decoration: none;
     transition: color 0.3s;
-}
-.social-links a:hover {
+  }
+  .social-links a:hover {
     color: #000;
-}
-.quick-links a {
+  }
+  .quick-links a {
     display: block;
     color: #333;
     margin-bottom: 5px;
     text-decoration: none;
     transition: color 0.3s;
-}
-.quick-links a:hover {
+  }
+  .quick-links a:hover {
     color: #555;
-}
+  }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s forwards;
+  }
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
