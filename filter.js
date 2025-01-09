@@ -10,6 +10,7 @@ function toggleCalendar() {
     calendar.style.display = calendar.style.display === "none" ? "block" : "none";
     if (calendar.style.display === "block") {
         renderCalendar(currentMonth, currentYear);
+        adjustCalendarPosition();
     }
 }
 
@@ -69,3 +70,12 @@ document.addEventListener("click", (event) => {
         calendar.style.display = "none";
     }
 });
+
+document.addEventListener("click", (event) => {
+    if (!calendar.contains(event.target) && event.target !== selectedDateInput) {
+        calendar.style.display = "none";
+    }
+});
+
+
+
