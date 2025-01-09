@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    color: #777;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    height: calc(100vh - 70px); 
+}
+
+.user-settings {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    background-color: transparent; 
+    border-radius: 8px;
+    text-align: center;
+}
+
+.user-settings h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: 6c757d;
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+button.danger {
+    background-color: #000000;
+    color: #fff;
+}
+
+button.danger:hover {
+    background-color: #000000;
+}

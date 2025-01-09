@@ -1,0 +1,129 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .form-box {
+    background-color: #fff;
+    border: 1px solid #000000a3;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .form-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .signup-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .signin-text {
+    margin-top: 20px;
+  }
+  
+  .signin-btn {
+    background-color: #383838;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-links, .quick-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-links p {
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .quick-links a {
+    color: #555;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+  
+  .quick-links a:hover {
+    text-decoration: underline;
+  }
+  

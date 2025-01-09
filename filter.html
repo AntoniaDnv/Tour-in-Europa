@@ -4,74 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Europe</title>
-    <link rel="stylesheet" href="filter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="filter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8d092f11e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <h1>Epic Escapes</h1>
+      </div>
+      <nav>
+          <a href="mainpage.html">Home</a> <!-- Link to Home Page -->
+          <a href="filter.html">Events</a> <!-- Link to Events Page -->
+          <a href="index-aboutus.html">About Us</a> <!-- Link to About Us Page -->
+          <a href="User-page-info-Euro.html">User Info</a> <!-- Link to User Info Page -->
+          <a href="user-profile.html">User Profile</a> <!-- Link to User Profile Page -->
+      </nav>
+  </header>
+  <div class="container">
+      <div class="event-filter">
+          <h2>Discover Upcoming Events</h2>
+          <div class="buttons">
+              <button>Today</button>
+              <button>Tomorrow</button>
+          </div>
+          <div class="filters">
+              <label><input type="checkbox" checked> Concerts</label>
+              <label><input type="checkbox" checked> Workshops</label>
+              <label><input type="checkbox" checked> Conferences</label>
+              <label><input type="checkbox" checked> Screenings</label>
+          </div>
+          <div class="date-picker">
+              <input type="text" placeholder="Pick a date" id="selectedDate" readonly onclick="toggleCalendar()">
+              <div class="calendar" id="calendar">
+                  <div class="calendar-header">
+                      <span class="prev-month" onclick="changeMonth(-1)">&#10094;</span>
+                      <span class="month-year" id="monthYear"></span>
+                      <span class="next-month" onclick="changeMonth(1)">&#10095;</span>
+                  </div>
+                  <div class="calendar-body" id="calendarBody"></div>
+              </div>
+          </div>
+      </div>
+      <section id = "events">
+          <div class="card-body">
+              <div class="card">
+                  <div class="image-section">
+                    <div class="image-container">
+                      <div class="heart-icon">♡</div>
+                      <div class="navigation-arrow left-arrow">‹</div>
+                      <div class="navigation-arrow right-arrow">›</div>
+                      <div class="image-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-section">
+                    <h3 class="title">1. The Royal Edinburgh Military Tattoo</h3>
+                    <div class="rating-section">
+                      <span class="stars">●●●●●</span>
+                      <span class="review-count">6,924</span>
+                    </div>
+                    <p class="category">Cultural Events</p>
+                    <p class="location">Old Town</p>
+                    <div class="reviewer-info">
+                      <img src="OrlinBanq.jpg" alt="Reviewer Avatar" class="reviewer-avatar">
+                      <span class="reviewer-name">By mandy63_13</span>
+                      <p class="review-text">Absolutely amazing, loved it all well worth a visit, very well organized make sure you book your <strong>tickets</strong> well in adv...</p>
+                    </div>
+                    <button class="see-tours-btn">See tours</button>
+                  </div>
+                  </div>
+          </div>
+          <div class="card-body">
+              <div class="card">
+                  <div class="image-section">
+                    <div class="image-container">
+                      <div class="heart-icon">♡</div>
+                      <div class="navigation-arrow left-arrow">‹</div>
+                      <div class="navigation-arrow right-arrow">›</div>
+                      <div class="image-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-section">
+                    <h3 class="title">1. The Royal Edinburgh Military Tattoo</h3>
+                    <div class="rating-section">
+                      <span class="stars">●●●●●</span>
+                      <span class="review-count">6,924</span>
+                    </div>
+                    <p class="category">Cultural Events</p>
+                    <p class="location">Old Town</p>
+                    <div class="reviewer-info">
+                      <img src="OrlinBanq.jpg" alt="Reviewer Avatar" class="reviewer-avatar">
+                      <span class="reviewer-name">By mandy63_13</span>
+                      <p class="review-text">Absolutely amazing, loved it all well worth a visit, very well organized make sure you book your <strong>tickets</strong> well in adv...</p>
+                    </div>
+                    <button class="see-tours-btn">See tours</button>
+                  </div>
+                  </div>
+          </div>
 
-<header>
-    EXPLORE EUROPE
-</header>
+      </section>
+      
+      
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Events</a>
-    <a href="#">About us</a>
-    <a href="#">Contact us</a>
-    <button>Sign in</button>
-</nav>
-<div class="container">
-    <div class="event-filter">
-        <h2>Discover upcoming events</h2>
-        <div class="buttons">
-            <button>Today</button>
-            <button>Tomorrow</button>
-        </div>
-        <div class="filters">
-            <label><input type="checkbox" checked> Concerts</label>
-            <label><input type="checkbox" checked> Workshops</label>
-            <label><input type="checkbox" checked> Conferences</label>
-            <label><input type="checkbox" checked> Screenings</label>
-        </div>
-        <div class="date-picker">
-            <input type="text" placeholder="Pick a date" id="selectedDate" readonly onclick="toggleCalendar()">
-            <div class="calendar" id="calendar" style="display: none;">
-                <div class="calendar-header">
-                    <span class="prev-month" onclick="changeMonth(-1)">&#10094;</span>
-                    <span class="month-year" id="monthYear"></span>
-                    <span class="next-month" onclick="changeMonth(1)">&#10095;</span>
-                </div>
-                <div class="calendar-body" id="calendarBody"></div>
-            </div>
-        </div>
-        
-    </div>
+      <div class="content-section-card" id="events">
+          <h2>Upcoming Events</h2>
+          <p>Events will be filtered based on your selected date here.</p>
+      </div>
+  </div>
 
-    <div class="content-section" id="events">
-        <h2>Upcoming Events</h2>
-        <p>Events will be filtered based on your selected date here.</p>
-    </div>
-</div>
-
-<div class="footer">
-    <div class="footer-section">
+<footer class="footer">
+    <section class="footer-section">
         <p>About us</p>
         <p>About us | Collections | Support us | Copyright</p>
-    </div>
-    <div class="footer-section">
+    </section>
+    <section class="footer-section">
         <p>Follow us</p>
         <div class="footer-icons">
             <i class="fab fa-instagram"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-facebook"></i>
         </div>
-    </div>
-    <div class="footer-section">
+    </section>
+    <section class="footer-section">
         <p>Join our newsletter</p>
-        <input type="email" placeholder="Join our newsletter">
-    </div>
-</div>
+        <input type="email" placeholder="Write your email">
+    </section>
+</footer>
 
-<script src="filter.js"></script>
+  <script src="filter.js"></script>
 </body>
 </html>

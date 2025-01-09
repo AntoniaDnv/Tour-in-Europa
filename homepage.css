@@ -44,6 +44,8 @@ header {
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid #ddd;
+    width: 100%;
+
 }
 /* Logo */
 .logo {
