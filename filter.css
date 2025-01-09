@@ -96,7 +96,7 @@ nav a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    width: 1000px;
+    width: 800px;
     cursor: pointer;
 }
 
@@ -130,6 +130,8 @@ nav a:hover {
 }
 
 .calendar-body div {
+  display: flex;
+  justify-content: center;
     padding: 8px;
     cursor: pointer;
     border-radius: 50%;
