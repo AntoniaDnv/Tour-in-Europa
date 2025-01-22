@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userProfile.css">
+   
+    <title>user Profile</title>
+</head>
+<body>
+    <header class="fade-in">
+        <div class="logo">
+          <h1>Epic Escapes</h1>
+        </div>
+        <nav>
+          <a href="mainpage.html">Home</a> 
+          <a href="filter.html">Events</a> <!-- Link to Events Page -->
+          <a href="index-aboutus.html">About Us</a> <!-- Link to About Us Page -->
+          <a href="User-page-info-Euro.html">User Settings</a> <!-- Link to User Info Page -->
+        </nav>
+      </header>
+      <main>
+    <div class="profile-container">
+        <h2>Profile Info</h2>
+        <div class="profile-picture">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <label for="username">Username</label>
+            <input type="text" id="username" value="JohnDoe" disabled>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" value="john.doe@example.com" disabled>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" value="123-456-7890" disabled>
+        </div>
+        <button class="edit-button" id="editButton">Edit Profile</button>
+    </div>
+    </main>
+    <script src="userProfile.js"></script>
+    <footer>
+        <div class="footer">
+          <div class="footer-section">
+            <p>About us</p>
+            <p>About us | Collections | Support us | Copyright</p>
+          </div>
+          <div class="footer-section">
+            <p>Follow us</p>
+            <div class="footer-icons">
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook"></i>
+            </div>
+          </div>
+          <div class="footer-section">
+            <p>Join our newsletter</p>
+            <input type="email" placeholder="Join our newsletter" />
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
