@@ -150,8 +150,8 @@ nav a:hover {
 }
 
 .footer {
-    background: #444;
-    color: #fff;
+  background: #fff;
+    color: #000000;
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
@@ -173,7 +173,7 @@ nav a:hover {
 .footer-icons i {
     margin: 5px;
     font-size: 18px;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
 }
 
