@@ -77,5 +77,42 @@ document.addEventListener("click", (event) => {
     }
 });
 
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("heart-icon")) {
+        event.target.classList.toggle("clicked");
+    }
+});
+document.querySelectorAll(".card").forEach((card) => {
+    const heartIcon = card.querySelector(".heart-icon");
+    heartIcon.addEventListener("click", () => {
+        heartIcon.classList.toggle("clicked");
+    });
+
+    const images = card.querySelectorAll(".carousel-image");
+    const indicators = card.querySelectorAll(".indicator");
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+        images.forEach((img, i) => img.classList.toggle("active", i === index));
+        indicators.forEach((ind, i) => ind.classList.toggle("active", i === index));
+    }
+
+    card.querySelector(".left-arrow").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel(currentIndex);
+    });
+
+    card.querySelector(".right-arrow").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel(currentIndex);
+    });
+
+    indicators.forEach((ind, i) =>
+        ind.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel(currentIndex);
+        })
+    );
+});
 
 
