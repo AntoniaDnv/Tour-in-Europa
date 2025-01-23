@@ -112,4 +112,24 @@ document.querySelectorAll(".card").forEach((card) => {
     );
 });
 
+function filterEventsByDate(selectedDate) {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        const eventDate = card.getAttribute("data-date");
+        if (eventDate === selectedDate) {
+            card.style.display = "flex"; // Show matching cards
+        } else {
+            card.style.display = "none"; // Hide non-matching cards
+        }
+    });
+}
+
+function selectDate(day, month, year) {
+    // Format selected date as YYYY-MM-DD
+    const formattedDate = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    selectedDateInput.value = formattedDate; // Display selected date
+    calendar.style.display = "none";
+    filterEventsByDate(formattedDate); // Filter events by the selected date
+}
+
 
