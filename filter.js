@@ -77,14 +77,11 @@ document.addEventListener("click", (event) => {
     }
 });
 
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("heart-icon")) {
-        event.target.classList.toggle("clicked");
-    }
-});
 document.querySelectorAll(".card").forEach((card) => {
     const heartIcon = card.querySelector(".heart-icon");
     heartIcon.addEventListener("click", () => {
+        console.log(heartIcon);
+        
         heartIcon.classList.toggle("clicked");
     });
 
