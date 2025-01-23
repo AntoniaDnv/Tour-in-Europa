@@ -112,11 +112,14 @@ document.querySelectorAll(".card").forEach((card) => {
     );
 });
 
-function filterEventsByDate(selectedDate) {
+function filterEventsByDateRange(selectedDate) {
     const cards = document.querySelectorAll(".card");
     cards.forEach(card => {
-        const eventDate = card.getAttribute("data-date");
-        if (eventDate === selectedDate) {
+        const startDate = card.getAttribute("data-start-date");
+        const endDate = card.getAttribute("data-end-date");
+
+        // Check if the selected date falls within the range
+        if (isDateInRange(selectedDate, startDate, endDate)) {
             card.style.display = "flex"; // Show matching cards
         } else {
             card.style.display = "none"; // Hide non-matching cards
@@ -124,12 +127,20 @@ function filterEventsByDate(selectedDate) {
     });
 }
 
+function isDateInRange(selectedDate, startDate, endDate) {
+    const selected = new Date(selectedDate);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    return selected >= start && selected <= end; // Check if the date is in range
+}
+
 function selectDate(day, month, year) {
-    // Format selected date as YYYY-MM-DD
     const formattedDate = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
     selectedDateInput.value = formattedDate; // Display selected date
     calendar.style.display = "none";
-    filterEventsByDate(formattedDate); // Filter events by the selected date
+    filterEventsByDateRange(formattedDate); // Filter events by the selected date range
 }
+
 
 
