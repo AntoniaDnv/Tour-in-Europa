@@ -77,14 +77,11 @@ document.addEventListener("click", (event) => {
     }
 });
 
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("heart-icon")) {
-        event.target.classList.toggle("clicked");
-    }
-});
 document.querySelectorAll(".card").forEach((card) => {
     const heartIcon = card.querySelector(".heart-icon");
     heartIcon.addEventListener("click", () => {
+        console.log(heartIcon);
+        
         heartIcon.classList.toggle("clicked");
     });
 
@@ -114,5 +111,36 @@ document.querySelectorAll(".card").forEach((card) => {
         })
     );
 });
+
+function filterEventsByDateRange(selectedDate) {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        const startDate = card.getAttribute("data-start-date");
+        const endDate = card.getAttribute("data-end-date");
+
+        // Check if the selected date falls within the range
+        if (isDateInRange(selectedDate, startDate, endDate)) {
+            card.style.display = "flex"; // Show matching cards
+        } else {
+            card.style.display = "none"; // Hide non-matching cards
+        }
+    });
+}
+
+function isDateInRange(selectedDate, startDate, endDate) {
+    const selected = new Date(selectedDate);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    return selected >= start && selected <= end; // Check if the date is in range
+}
+
+function selectDate(day, month, year) {
+    const formattedDate = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    selectedDateInput.value = formattedDate; // Display selected date
+    calendar.style.display = "none";
+    filterEventsByDateRange(formattedDate); // Filter events by the selected date range
+}
+
 
 

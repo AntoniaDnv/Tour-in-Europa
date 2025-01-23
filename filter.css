@@ -192,6 +192,14 @@ nav a:hover {
   width: 100%;            /* Make it responsive */
   margin-bottom: 2%;
 }
+.card {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card[style*="display: none"] {
+  opacity: 0;
+  transform: scale(0.95);
+}
   
 #events .image-section {
     width: 40%;
