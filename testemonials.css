@@ -1,25 +1,95 @@
-
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   
-    
-    --card-clr: #ddd; 
-    --body-clr: #f9f9f9; 
-    --primary-clr: #333; 
-    --heading-clr: #000; 
-    --text-clr: #666; 
-  }
-  
-  body {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--body-clr);
-  }
+  --card-clr: #ddd; 
+  --body-clr: #f9f9f9; 
+  --primary-clr: #333; 
+  --heading-clr: #000; 
+  --text-clr: #666; 
+}
+
+/* Body Styling */
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-clr);
+}
+
+/* Event Section Styling */
+.event-cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.event-card {
+  background-color: var(--card-clr);
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Image */
+.event-card img {
+  width: 100%; 
+  max-width: 300px; 
+  aspect-ratio: 3 / 2; 
+  overflow: hidden; 
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+/* Event Title */
+.event-card h4 {
+  font-size: 1.5rem;
+  color: var(--heading-clr);
+  margin: 10px 0;
+}
+
+/* Event Description */
+.event-card p {
+  font-size: 1rem;
+  color: var(--text-clr);
+  margin: 5px 0;
+}
+
+/* Event Location and Date */
+.event-card p strong {
+  color: var(--heading-clr);
+  font-weight: bold;
+}
+
+/* Button Styling */
+.event-card button {
+  background-color: var(--primary-clr);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-card button:hover {
+  background-color: var(--heading-clr);
+}
   
   .testimonials-section {
     width: 100%;
